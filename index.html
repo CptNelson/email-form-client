@@ -7,40 +7,48 @@
 			name="email-form"
 			content="Web form for collecting user email information"
 		/>
+		<link
+			href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
 		<title>Email Form</title>
 	</head>
 	<body>
-		<div class="contact-form">
-			<form
-				id="form"
-				method="post"
-				action="send"
-				enctype="multipart/form-data"
-			>
-				<label for="fname">First name:</label><br />
-				<input
-					type="text"
-					id="fname"
-					name="fname"
-					required="true"
-				/><br />
-				<label for="lname">Last name:</label><br />
-				<input
-					type="text"
-					id="lname"
-					name="lname"
-					required="true"
-				/><br />
-				<label for="email">Email address:</label><br />
-				<input
-					type="email"
-					id="email"
-					name="email"
-					placeholder="example@gmail.com"
-					required="true"
-				/><br />
-				<input type="submit" value="Submit" />
-			</form>
+		<div class="container">
+			<div class="email-form">
+				<h2>Please enter your email address</h2>
+				<form
+					id="form"
+					method="post"
+					action="send"
+					enctype="multipart/form-data"
+				>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Email"
+						required="true"
+					/>
+					<input
+						type="text"
+						id="fname"
+						name="fname"
+						required="true"
+						placeholder="First Name"
+					/>
+					<input
+						type="text"
+						id="lname"
+						name="lname"
+						required="true"
+						placeholder="Last Name"
+					/>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
 		</div>
 		<script src="index.js"></script>
 	</body>
