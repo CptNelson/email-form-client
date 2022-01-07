@@ -1,3 +1,4 @@
+const API_URL = 'https://github.com/CptNelson/email-form-client';
 const form = document.getElementById('form');
 const inputs = [...form.querySelectorAll('input')];
 const submitButton = document.getElementById('submit-button');
@@ -33,7 +34,7 @@ const validateEmailBeforeSending = (emailAddress) => {
 };
 
 const sendFormData = async (formData) => {
-	const response = await fetch('https://myrrys.fi/emailform/api/v1/emails', {
+	const response = await fetch(API_URL, {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',
